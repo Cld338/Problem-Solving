@@ -3,9 +3,9 @@ p=[]
 a=int(input())
 n=0
 while True:
-    if not(q):
+    if not q:
         q,p=p,[]
-    if not(q):
+    if not q:
         print(-1)
         break
     x=q.pop(0)
