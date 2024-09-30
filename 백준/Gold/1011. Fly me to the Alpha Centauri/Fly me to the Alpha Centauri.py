@@ -1,11 +1,9 @@
-from math import sqrt, floor
+import sys
+input=sys.stdin.readline
 for i in range(int(input())):
     A,B=map(int, input().split())
     N=B-A
-    n=floor(sqrt(N))
+    n=int(N**.5//1)
     t=2*n-1
     N-=n**2
-    for i in range(n,0,-1):
-        t+=N//i
-        N%=i
-    print(t)
+    print(t+N // n + (0 if N % n == 0 else 1))
